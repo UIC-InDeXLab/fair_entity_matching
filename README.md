@@ -8,7 +8,7 @@ Companion repository for the paper "Through the Fairness Lens: Experimental Anal
 - Clone the repo
 - Create a virtual environment using e.g., venv or Conda
 - Install any missing packages using e.g., pip or Conda
-  - main packages are fairly standard (e.g., Pandas, NumPy, SciPy, Scikit-learn, Matplotlib, [py-entitymatching](http://anhaidgroup.github.io/py_entitymatching/v0.3.3/index.html))
+  - main packages are fairly standard (e.g., Pandas, NumPy, SciPy, Scikit-learn, Matplotlib, [Py-EntityMatching](http://anhaidgroup.github.io/py_entitymatching/v0.3.3/index.html))
 
 ## Usage
 ### Familiarize yourself with an example:
