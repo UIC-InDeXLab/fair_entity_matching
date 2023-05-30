@@ -32,6 +32,12 @@ can be generated.
 ### Synthetic data generator:
 - In synthetic data generator/FacultyMatch and synthetic data generator/NoFlyCompas paths, the scripts that can be used to generate synthetic socail data for entity matching are provided. Users can employ these scripts to create such datasets with a variety of settings such as limiting the rate on non-matches in the output (i.e. manual blocking), change the number and type of perturbations and etc.
 
+## Notice
+This project is still under development, so please beware of potential bugs, issues etc. Use at your own responsibility in practice.
+
+## Contact
+Feel free to contact the authors or leave an issue in case of any complications. We will try to respond as soon as possible.
+
 ## License
 
 This project is licensed under the MIT License &mdash; see the [LICENSE.md](LICENSE.md) file for details.
