@@ -1,6 +1,6 @@
 # Fair Entity Matching
 
-### A fairness suit for auditing Entity Matching approaches
+### A fairness suite for auditing Entity Matching approaches
 Companion repository for the paper "Through the Fairness Lens: Experimental Analysis and Evaluation of Entity Matching". [Technical Report](techrep.pdf)
 
 
