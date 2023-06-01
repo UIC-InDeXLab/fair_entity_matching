@@ -125,7 +125,7 @@ def create_plots(dataset, experiment):
     plt.rcParams["figure.autolayout"] = True
     fig, ax = plt.subplots()
     ax.set_ylabel('Fairness Measure', fontsize=18)
-    ax.set_xlabel('Subgroups', fontsize=18)
+    ax.set_xlabel('Groups', fontsize=18)
     fig.canvas.draw()
     plt.xlim(0, len(x))
     plt.ylim(0, len(measures))
@@ -220,9 +220,9 @@ def experiment_one(model, dataset, left_sens_attribute, right_sens_attribute, th
 
 # Pairwise Fairness
 def experiment_two(model, dataset, left_sens_attribute, right_sens_attribute, test_file, threshold,
-                   single_fairness=False):
+                   single_fairness=False, preds_file=""):
     workloads = run_one_workload(model, dataset, left_sens_attribute, right_sens_attribute, test_file=test_file,
-                                 single_fairness=single_fairness)
+                                 single_fairness=single_fairness, preds_file=preds_file)
     fairEM = fem.FairEM(model, workloads, alpha=0.05, full_workload_test=test_file, threshold=threshold,
                         single_fairness=single_fairness)
 
@@ -270,7 +270,7 @@ def experiment_two(model, dataset, left_sens_attribute, right_sens_attribute, te
                                   outdir="experiments/" + dataset + "/")
 
 
-def dataset_experiments(dataset, sens_att, test_file, preds_file, threshold=0.2):  # Threshold specifies the fairness threshold
+def dataset_experiments(dataset, sens_att, test_file, preds_file, threshold=0.05):  # Threshold specifies the fairness threshold
     if dataset in ['Shoes', 'Cameras', 'Compas', 'CSRankings']:
         models = ["DeepMatcher", "Ditto", "GNEM", "HierMatcher", "MCAN", "SVM",
                   "RuleBasedMatcher", "RandomForest", "NaiveBayes", "LogisticRegression", "LinearRegression",
@@ -297,7 +297,9 @@ def dataset_experiments(dataset, sens_att, test_file, preds_file, threshold=0.2)
                        left_sens_attribute="left_" + sens_att,
                        right_sens_attribute="right_" + sens_att,
                        single_fairness=False,
-                       threshold=threshold, test_file=test_file)
+                       threshold=threshold,
+                       test_file=test_file,
+                       preds_file=preds_file)
         print("-------------------------------------------------")
 
     create_plots(dataset, "2")
@@ -322,4 +324,4 @@ dataset_experiments("Compas", "Ethnic_Code_Text", test_file="test.csv", preds_fi
 # dataset_experiments("iTunes-Amazon", "Genre", test_file="test.csv", preds_file="preds_"+str(t))
 # dataset_experiments("DBLP-ACM", "venue", test_file="test.csv",preds_file="preds_"+str(t))
 # dataset_experiments("DBLP-Scholar", "ENTRYTYPE", test_file="test.csv",preds_file="preds_"+str(t))
-# dataset_experiments("Cameras", "company", test_file="test_others__.csv",preds_file="preds_"+str(t))
+# dataset_experiments("Cameras", "company", test_file="test.csv",preds_file="preds_"+str(t))
