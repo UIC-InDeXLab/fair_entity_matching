@@ -1,7 +1,16 @@
 # Fair Entity Matching
 
 ### A fairness suite for auditing Entity Matching approaches
-Companion repository for the paper "Through the Fairness Lens: Experimental Analysis and Evaluation of Entity Matching". [Technical Report](techrep.pdf)
+Companion repository for the paper "Through the Fairness Lens: Experimental Analysis and Evaluation of Entity Matching". 
+
+
+## Publication(s) to cite:
+[1] Nima Shahbazi, Nikola Danevski, Fatemeh Nargesian, Abolfazl Asudeh, and Divesh Srivastava. "Through the Fairness Lens: Experimental Analysis and Evaluation of Entity Matching." Proceedings of the VLDB Endowment 16, no. 11 (2023): 3279-3292.
+
+[VLDB Publication] <a href="https://dl.acm.org/doi/abs/10.14778/3611479.3611525">https://dl.acm.org/doi/abs/10.14778/3611479.3611525</a> <br>
+[Technical Report](techrep.pdf) <br>
+[VLDB Slides](FEM-Slides-VLDB23.pdf)
+
 
 
 ## Installation
