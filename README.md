@@ -11,6 +11,9 @@ Companion repository for the paper "Through the Fairness Lens: Experimental Anal
 [Technical Report](techrep.pdf) <br>
 [VLDB Slides](FEM-Slides-VLDB23.pdf)
 
+## :warning: Notice:
+For easier reproducibility of the results you can check [this repository](https://github.com/UIC-InDeXLab/FairEMRepro)
+
 
 
 ## Installation
